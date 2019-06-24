@@ -37,10 +37,10 @@ export default Vue.extend({
       },
       type: Array
     },
-    // {start: 0, length: 2, direction: "none"}
+    // {start: 0, end: 2, direction: "none"}
     selection: {
       default: function() {
-        return { start: 0, length: 0, direction: "none" };
+        return { start: 0, end: 0, direction: "none" };
       },
       type: Object
     }
