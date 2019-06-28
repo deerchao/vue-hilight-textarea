@@ -12,11 +12,15 @@
       ref="input"
       v-bind="$attrs"
       v-model="input"
-      @input="$emit('input', input)"
+      @input="onTextInput"
       @scroll="onInputScroll"
       @focus="hasFocus = true"
       @blur="hasFocus = false"
       class="hta-input hta-content"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
     ></textarea>
   </div>
 </template>
@@ -43,6 +47,10 @@ export default Vue.extend({
         return { start: 0, end: 0, direction: "none" };
       },
       type: Object
+    },
+    autoHeight: {
+      default: false,
+      type: Boolean
     }
   },
   data: function() {
@@ -117,6 +125,9 @@ export default Vue.extend({
       clearInterval(this.selectionUpdateInterval);
   },
   methods: {
+    focus: function() {
+      this.$refs.input.focus();
+    },
     generateHtml: function(input, hilights) {
       if (input.length == 0) return "";
       // last '\n' makes another line in textarea, but not in div
@@ -179,6 +190,10 @@ export default Vue.extend({
     },
     onContainerScroll: function() {
       this.$refs.container.scrollLeft = 0;
+    },
+    onTextInput: function() {
+      this.$emit("input", this.$refs.input.value);
+      if (this.autoHeight) this.fitHeight();
     },
     onInputScroll: function() {
       this.syncScroll();
@@ -243,6 +258,23 @@ export default Vue.extend({
 
       st = Math.max(0, Math.min(st, input.scrollHeight - input.clientHeight));
       input.scrollTop = st;
+    },
+    fitHeight: function() {
+      var self = this;
+      this.$nextTick(function() {
+        var el = self.$refs.input;
+        if (!el) return;
+        // compute the height difference which is caused by border and outline
+        var outerHeight = parseInt(window.getComputedStyle(el).height, 10);
+        var diff = outerHeight - el.clientHeight;
+
+        // set the height to 0 in case of it has to be shrinked
+        el.style.height = 0;
+
+        // set the correct height
+        // el.scrollHeight is the full height of the content, not just the visible part
+        el.style.height = el.scrollHeight + diff + "px";
+      });
     }
   }
 });

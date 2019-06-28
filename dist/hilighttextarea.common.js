@@ -2775,12 +2775,12 @@ var web_dom_iterable = __webpack_require__("ac6a");
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72901ea5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HilightTextArea.vue?vue&type=template&id=1e4cd3c4&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"container",staticClass:"hta-container",class:_vm.hasFocus?'hta-focus':'hta-blur',on:{"scroll":_vm.onContainerScroll}},[_c('div',{ref:"backdrop",staticClass:"hta-backdrop"},[_c('div',{staticClass:"hta-highlights hta-content",domProps:{"innerHTML":_vm._s(_vm.html)}})]),_c('textarea',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.input),expression:"input"}],ref:"input",staticClass:"hta-input hta-content",domProps:{"value":(_vm.input)},on:{"input":[function($event){if($event.target.composing){ return; }_vm.input=$event.target.value},function($event){return _vm.$emit('input', _vm.input)}],"scroll":_vm.onInputScroll,"focus":function($event){_vm.hasFocus = true},"blur":function($event){_vm.hasFocus = false}}},'textarea',_vm.$attrs,false))])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72901ea5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HilightTextArea.vue?vue&type=template&id=5e82bb7a&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"container",staticClass:"hta-container",class:_vm.hasFocus?'hta-focus':'hta-blur',on:{"scroll":_vm.onContainerScroll}},[_c('div',{ref:"backdrop",staticClass:"hta-backdrop"},[_c('div',{staticClass:"hta-highlights hta-content",domProps:{"innerHTML":_vm._s(_vm.html)}})]),_c('textarea',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.input),expression:"input"}],ref:"input",staticClass:"hta-input hta-content",attrs:{"autocomplete":"off","autocorrect":"off","autocapitalize":"off","spellcheck":"false"},domProps:{"value":(_vm.input)},on:{"input":[function($event){if($event.target.composing){ return; }_vm.input=$event.target.value},_vm.onTextInput],"scroll":_vm.onInputScroll,"focus":function($event){_vm.hasFocus = true},"blur":function($event){_vm.hasFocus = false}}},'textarea',_vm.$attrs,false))])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/HilightTextArea.vue?vue&type=template&id=1e4cd3c4&
+// CONCATENATED MODULE: ./src/components/HilightTextArea.vue?vue&type=template&id=5e82bb7a&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.sort.js
 var es6_array_sort = __webpack_require__("55dd");
@@ -3068,6 +3068,10 @@ function _compareRanges(a, b) {
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ var HilightTextAreavue_type_script_lang_js_ = (external_commonjs_vue_commonjs2_vue_root_Vue_default.a.extend({
@@ -3085,16 +3089,20 @@ function _compareRanges(a, b) {
       },
       type: Array
     },
-    // {start: 0, length: 2, direction: "none"}
+    // {start: 0, end: 2, direction: "none"}
     selection: {
       default: function _default() {
         return {
           start: 0,
-          length: 0,
+          end: 0,
           direction: "none"
         };
       },
       type: Object
+    },
+    autoHeight: {
+      default: false,
+      type: Boolean
     }
   },
   data: function data() {
@@ -3175,6 +3183,9 @@ function _compareRanges(a, b) {
     if (this.selectionUpdateInterval >= 0) clearInterval(this.selectionUpdateInterval);
   },
   methods: {
+    focus: function focus() {
+      this.$refs.input.focus();
+    },
     generateHtml: function generateHtml(input, hilights) {
       if (input.length == 0) return ""; // last '\n' makes another line in textarea, but not in div
 
@@ -3239,6 +3250,10 @@ function _compareRanges(a, b) {
     onContainerScroll: function onContainerScroll() {
       this.$refs.container.scrollLeft = 0;
     },
+    onTextInput: function onTextInput() {
+      this.$emit("input", this.$refs.input.value);
+      if (this.autoHeight) this.fitHeight();
+    },
     onInputScroll: function onInputScroll() {
       this.syncScroll();
     },
@@ -3302,6 +3317,21 @@ function _compareRanges(a, b) {
       if (st >= input.scrollTop && st <= input.scrollTop + input.clientHeight) return;
       st = Math.max(0, Math.min(st, input.scrollHeight - input.clientHeight));
       input.scrollTop = st;
+    },
+    fitHeight: function fitHeight() {
+      var self = this;
+      this.$nextTick(function () {
+        var el = self.$refs.input;
+        if (!el) return; // compute the height difference which is caused by border and outline
+
+        var outerHeight = parseInt(window.getComputedStyle(el).height, 10);
+        var diff = outerHeight - el.clientHeight; // set the height to 0 in case of it has to be shrinked
+
+        el.style.height = 0; // set the correct height
+        // el.scrollHeight is the full height of the content, not just the visible part
+
+        el.style.height = el.scrollHeight + diff + "px";
+      });
     }
   }
 }));
