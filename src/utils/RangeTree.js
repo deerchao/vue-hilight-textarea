@@ -3,13 +3,13 @@ export default {
         return createNode();
     },
     cloneNode: function (node) {
-        var dest = createNode();
+        const dest = createNode();
         cloneNode(node, dest);
         return dest;
     },
     collectRanges: function (node) {
-        var buffer = [];
-        collectRanges(node, buffer);
+        const buffer = [];
+        collectRanges(node, buffer, 0);
         return buffer;
     },
     addRanges: function (node, values, sorted) {
@@ -39,28 +39,29 @@ function createRange(value) {
             start: value.start,
             end: value.start + value.length,
             length: value.length,
-            tag: value.tag || ''
+            tag: value.tag || {}
         };
     return {
         start: value.start,
         end: value.end,
         length: value.end - value.start,
-        tag: value.tag || null
+        tag: value.tag || {}
     };
 }
 
 function findParentNode(node, value) {
     // children must be ordered
-    for (var i = 0; i < node.children.length; i++) {
-        var c = node.children[i];
+    for (let i = 0; i < node.children.length; i++) {
+        const c = node.children[i];
         if (!c.value)
             continue;
         if (c.value.start <= value.start && c.value.end >= value.end) {
-            if (c.children.length == 0) return c;
-            for (var j = 0; j < c.children.length; j++) {
-                var n = findParentNode(c.children[j], value);
+            if (c.children.length === 0) return c;
+            for (let j = 0; j < c.children.length; j++) {
+                const n = findParentNode(c.children[j], value);
                 if (n) return n;
             }
+            return c;
         }
     }
     if (
@@ -76,16 +77,16 @@ function addRanges(node, values, sorted) {
     if (!sorted)
         values.sort(compareRanges);
 
-    for (var i = 0; i < values.length; i++)
+    for (let i = 0; i < values.length; i++)
         addRange(node, values[i]);
 }
 
 function addRange(node, value) {
-    var parent = findParentNode(node, value);
+    const parent = findParentNode(node, value);
     if (!parent)
         return;
-    for (var i = 0; i < parent.children.length; i++) {
-        var sibling = parent.children[i];
+    for (let i = 0; i < parent.children.length; i++) {
+        const sibling = parent.children[i];
         if (!sibling.value)
             continue;
 
@@ -123,7 +124,7 @@ function addRange(node, value) {
             sibling.value.end >= value.end
         ) {
             // sibling contains current node, should happen with selections only
-            var part = {
+            const part = {
                 value: value,
                 children: sibling.children
             };
@@ -164,17 +165,25 @@ function addRange(node, value) {
     parent.children.push(createNode(value));
 }
 
-function collectRanges(node, buffer) {
-    if (node.value !== null) buffer.push(node.value);
-    for (var i = 0; i < node.children.length; i++)
-        collectRanges(node.children[i], buffer);
+function collectRanges(node, buffer, index) {
+    if (node.value !== null) {
+        const value = {
+            ...node.value,
+        };
+        value.tag = value.tag || {};
+        value.tag = {...value.tag};
+        value.tag.nodeIndex = index;
+        buffer.push(value);
+    }
+    for (let i = 0; i < node.children.length; i++)
+        collectRanges(node.children[i], buffer, i);
 }
 
 function cloneNode(source, dest) {
     dest.value = source.value ? createRange(source.value) : null;
     dest.children = [];
-    for (var i = 0; i < source.children.length; i++) {
-        var target = createNode();
+    for (let i = 0; i < source.children.length; i++) {
+        const target = createNode();
         cloneNode(source.children[i], target);
         dest.children.push(target);
     }

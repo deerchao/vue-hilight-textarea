@@ -4,23 +4,37 @@
       <HilightTextArea
         v-model="text"
         :selection="selection"
-        @select="selection = $event"
+        @update:selection="selection = $event"
         :segments="segments"
         rows="10"
       />
     </div>
 
-    <input type="number" v-model.number="selection.start">
-    <input type="number" v-model.number="selection.end">
+    <div>
+      <label>
+        Selection Start:
+        <input type="number" v-model.number="selection.start" />
+      </label>
+      <label>
+        Selection End:
+        <input type="number" v-model.number="selection.end" />
+      </label>
+    </div>
 
     <div>
       <div v-for="(s, i) in segments" :key="s.start * s.end">
-        <input type="number" v-model.number="s.start">
-        <input type="number" v-model.number="s.end">
+        <label>
+          Segment {{i}} Start:
+          <input type="number" v-model.number="s.start" />
+        </label>
+        <label>
+          Segment {{i}} End:
+          <input type="number" v-model.number="s.end" />
+        </label>
 
         <button type="button" @click="removeSegment(i)">Delete</button>
       </div>
-      <button type="button" @click="addSegment">Add</button>
+      <button type="button" @click="addSegment">Add Segment</button>
     </div>
   </div>
 </template>

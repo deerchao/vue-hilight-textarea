@@ -232,6 +232,21 @@ module.exports = __webpack_require__("9e1e") ? Object.defineProperties : functio
 
 /***/ }),
 
+/***/ "18d1":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("7d23");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("7dddfaa1", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
 /***/ "1bc3":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1096,6 +1111,17 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 
 /***/ }),
 
+/***/ "6331":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RawHilightTextArea_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("18d1");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RawHilightTextArea_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RawHilightTextArea_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RawHilightTextArea_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
 /***/ "63b6":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1266,6 +1292,21 @@ module.exports = function (exec) {
     return true;
   }
 };
+
+
+/***/ }),
+
+/***/ "7d23":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("2350")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".hta-container{display:inline-block;position:relative;overflow:hidden!important;-webkit-text-size-adjust:none!important;-moz-text-size-adjust:none!important;-ms-text-size-adjust:none!important;text-size-adjust:none!important}.hta-background{position:absolute!important;top:0!important;left:0!important;overflow-x:hidden!important;overflow-y:auto!important}.hta-highlights{width:auto!important;height:auto!important;border-style:none!important;white-space:pre-wrap!important;word-wrap:break-word!important;overflow:hidden!important}.hta-text{text-align:left;font:inherit;margin:0;padding:0}.hta-input{display:block!important;position:relative!important;overflow-x:hidden!important;overflow-y:auto!important;color:transparent!important;background:none transparent!important;width:100%!important;height:100%!important;resize:none!important;outline:none!important;caret-color:#333}.hta-highlight,.hta-input{border-style:none!important}.hta-highlight{margin:0!important;padding:0!important;font:inherit;color:inherit}.hta-highlight-odd{background-color:#ee9}.hta-highlight-even{background-color:#ddd}", ""]);
+
+// exports
 
 
 /***/ }),
@@ -1870,7 +1911,7 @@ exports = module.exports = __webpack_require__("2350")(false);
 
 
 // module
-exports.push([module.i, ".hta-container{display:inline-block;position:relative;overflow:hidden!important;-webkit-text-size-adjust:none!important}.hta-backdrop{position:absolute!important;top:0!important;right:-99px!important;bottom:0!important;left:0!important;padding-right:99px!important;overflow-x:hidden!important;overflow-y:auto!important}.hta-highlights{width:auto!important;height:auto!important;border-color:transparent!important;white-space:pre-wrap!important;word-wrap:break-word!important;overflow:hidden!important}.hta-content{border:1px solid #adb5bd;text-align:left}.hta-highlight{padding:0!important;color:inherit;margin:0!important;border:none!important}.hta-input{display:block!important;position:relative!important;margin:0;padding:0;border-radius:0;font:inherit;overflow-x:hidden!important;overflow-y:auto!important;color:transparent!important;background:none transparent!important;caret-color:#333}.hta-selection{background:#ccc}.hta-blur .hta-selection:empty{background-color:rgba(255,0,0,.5)!important;width:2px;height:.8em;margin-left:-1px!important;margin-right:-1px!important;display:inline-block;vertical-align:middle}", ""]);
+exports.push([module.i, ".hta-border{padding:3px;border:1px solid #a9a9a9;border-radius:3px}.hta-border-focus{border-color:#90bafe}.hta-border .hta-container{width:100%;height:100%}", ""]);
 
 // exports
 
@@ -2002,12 +2043,19 @@ var web_dom_iterable = __webpack_require__("ac6a");
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72efceac-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HilightTextArea.vue?vue&type=template&id=5e82bb7a&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"container",staticClass:"hta-container",class:_vm.hasFocus?'hta-focus':'hta-blur',on:{"scroll":_vm.onContainerScroll}},[_c('div',{ref:"backdrop",staticClass:"hta-backdrop"},[_c('div',{staticClass:"hta-highlights hta-content",domProps:{"innerHTML":_vm._s(_vm.html)}})]),_c('textarea',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.input),expression:"input"}],ref:"input",staticClass:"hta-input hta-content",attrs:{"autocomplete":"off","autocorrect":"off","autocapitalize":"off","spellcheck":"false"},domProps:{"value":(_vm.input)},on:{"input":[function($event){if($event.target.composing){ return; }_vm.input=$event.target.value},_vm.onTextInput],"scroll":_vm.onInputScroll,"focus":function($event){_vm.hasFocus = true},"blur":function($event){_vm.hasFocus = false}}},'textarea',_vm.$attrs,false))])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72efceac-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HilightTextArea.vue?vue&type=template&id=a881c222&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"hta-border",class:{'hta-border-focus': _vm.hasFocus}},[_c('RawHighlightTextArea',_vm._b({ref:"input",attrs:{"value":_vm.value,"segments":_vm.segments,"selection":_vm.selection,"autoHeight":_vm.autoHeight},on:{"input":function($event){return _vm.$emit('input', $event)},"focus":_vm.onFocus,"blur":_vm.onBlur,"update:selection":function($event){return _vm.$emit('update:selection', $event)}}},'RawHighlightTextArea',_vm.$attrs,false))],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/HilightTextArea.vue?vue&type=template&id=5e82bb7a&
+// CONCATENATED MODULE: ./src/components/HilightTextArea.vue?vue&type=template&id=a881c222&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72efceac-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RawHilightTextArea.vue?vue&type=template&id=3ba3fd00&
+var RawHilightTextAreavue_type_template_id_3ba3fd00_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"container",staticClass:"hta-container",class:_vm.containerClasses,on:{"scroll":_vm.onContainerScroll}},[_c('div',{ref:"background",staticClass:"hta-background"},[_c('div',{staticClass:"hta-highlights hta-text",domProps:{"innerHTML":_vm._s(_vm.html)}})]),_c('textarea',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.input),expression:"input"}],ref:"input",staticClass:"hta-input hta-text",attrs:{"autocomplete":"off","autocorrect":"off","autocapitalize":"off","spellcheck":"false"},domProps:{"value":(_vm.input)},on:{"input":[function($event){if($event.target.composing){ return; }_vm.input=$event.target.value},_vm.onTextInput],"scroll":_vm.onInputScroll,"focus":function($event){_vm.hasFocus = true},"blur":function($event){_vm.hasFocus = false}}},'textarea',_vm.$attrs,false))])}
+var RawHilightTextAreavue_type_template_id_3ba3fd00_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/RawHilightTextArea.vue?vue&type=template&id=3ba3fd00&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.sort.js
 var es6_array_sort = __webpack_require__("55dd");
@@ -2035,7 +2083,7 @@ function _defineProperty(obj, key, value) {
 
   return obj;
 }
-// CONCATENATED MODULE: ./src/utils/RangeTree.js
+// CONCATENATED MODULE: ./src/utils/rangeTree.js
 
 
 
@@ -2046,7 +2094,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-/* harmony default export */ var RangeTree = ({
+/* harmony default export */ var rangeTree = ({
   createNode: function createNode() {
     return _createNode();
   },
@@ -2060,7 +2108,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
   collectRanges: function collectRanges(node) {
     var buffer = [];
 
-    _collectRanges(node, buffer);
+    _collectRanges(node, buffer, 0);
 
     return buffer;
   },
@@ -2091,13 +2139,13 @@ function _createRange(value) {
     start: value.start,
     end: value.start + value.length,
     length: value.length,
-    tag: value.tag || ''
+    tag: value.tag || {}
   };
   return {
     start: value.start,
     end: value.end,
     length: value.end - value.start,
-    tag: value.tag || null
+    tag: value.tag || {}
   };
 }
 
@@ -2108,12 +2156,14 @@ function findParentNode(node, value) {
     if (!c.value) continue;
 
     if (c.value.start <= value.start && c.value.end >= value.end) {
-      if (c.children.length == 0) return c;
+      if (c.children.length === 0) return c;
 
       for (var j = 0; j < c.children.length; j++) {
         var n = findParentNode(c.children[j], value);
         if (n) return n;
       }
+
+      return c;
     }
   }
 
@@ -2216,11 +2266,18 @@ function _addRange(node, value) {
   parent.children.push(_createNode(value));
 }
 
-function _collectRanges(node, buffer) {
-  if (node.value !== null) buffer.push(node.value);
+function _collectRanges(node, buffer, index) {
+  if (node.value !== null) {
+    var value = _objectSpread({}, node.value);
+
+    value.tag = value.tag || {};
+    value.tag = _objectSpread({}, value.tag);
+    value.tag.nodeIndex = index;
+    buffer.push(value);
+  }
 
   for (var i = 0; i < node.children.length; i++) {
-    _collectRanges(node.children[i], buffer);
+    _collectRanges(node.children[i], buffer, i);
   }
 }
 
@@ -2245,7 +2302,27 @@ function _compareRanges(a, b) {
   if (a.length < b.length) return 1;
   return 0;
 }
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HilightTextArea.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./src/utils/selectionHelper.js
+function selectionEquals(a, b) {
+  if (a === b) return true;
+  if (!a || !b) return false;
+  return a.start === b.start && a.end === b.end && a.direction === b.direction;
+}
+
+function normalizeSelection(s) {
+  if (!s) return {
+    direction: "forward",
+    start: 0,
+    end: 0
+  };
+  if (s.start === undefined) s.start = 0;
+  if (s.end === undefined) s.end = 0;
+  if (s.direction !== 'forward' && s.direction !== 'backward') s.direction = 'forward';
+  return s;
+}
+
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RawHilightTextArea.vue?vue&type=script&lang=js&
 
 //
 //
@@ -2269,15 +2346,11 @@ function _compareRanges(a, b) {
 //
 //
 //
-//
-//
-//
-//
-//
 
 
-/* harmony default export */ var HilightTextAreavue_type_script_lang_js_ = (external_commonjs_vue_commonjs2_vue_root_Vue_default.a.extend({
-  name: "HilightTextArea",
+
+/* harmony default export */ var RawHilightTextAreavue_type_script_lang_js_ = (external_commonjs_vue_commonjs2_vue_root_Vue_default.a.extend({
+  name: "RawHighlightTextArea",
   inheritAttrs: false,
   props: {
     value: {
@@ -2291,13 +2364,13 @@ function _compareRanges(a, b) {
       },
       type: Array
     },
-    // {start: 0, end: 2, direction: "none"}
+    // {start: 0, end: 2, direction: "forward"}
     selection: {
       default: function _default() {
         return {
           start: 0,
           end: 0,
-          direction: "none"
+          direction: "forward"
         };
       },
       type: Object
@@ -2310,14 +2383,51 @@ function _compareRanges(a, b) {
   data: function data() {
     return {
       input: "",
-      selectionUpdateInterval: -1,
+      backgroundJobInterval: -1,
       selectedRange: {
         start: 0,
         end: 0,
-        direction: "none"
+        direction: "forward"
       },
       hasFocus: false
     };
+  },
+  computed: {
+    containerClasses: function containerClasses() {
+      var list = [];
+      list.push(this.hasFocus ? "hta-focus" : "hta-blur");
+      return list;
+    },
+    sortedSegments: function sortedSegments() {
+      var segments = this.segments.map(function (x) {
+        return rangeTree.createRange(x);
+      });
+      segments.sort(function (a, b) {
+        return rangeTree.compareRanges(a, b);
+      });
+      return segments;
+    },
+    segmentTree: function segmentTree() {
+      // used as a cache, since value changes less offen than selection
+      var root = rangeTree.createNode();
+      rangeTree.addRanges(root, this.sortedSegments, true);
+      return root;
+    },
+    hilights: function hilights() {
+      var selection = this.selectedRange;
+      var root = rangeTree.cloneNode(this.segmentTree);
+      rangeTree.addRange(root, rangeTree.createRange({
+        start: selection.start,
+        end: selection.end,
+        tag: {
+          class: "hta-selection"
+        }
+      }));
+      return rangeTree.collectRanges(root);
+    },
+    html: function html() {
+      return generateHtml(this.input, this.hilights);
+    }
   },
   watch: {
     value: function value(v) {
@@ -2328,7 +2438,7 @@ function _compareRanges(a, b) {
         if (!r) return;
         r.start = +r.start;
         r.end = +r.end;
-        r.direction = r.direction || "none";
+        r.direction = r.direction || "forward";
         this.select(r);
       },
       deep: true
@@ -2338,141 +2448,24 @@ function _compareRanges(a, b) {
       this.$nextTick(function () {
         self.syncScroll();
       });
+    },
+    hasFocus: function hasFocus(v) {
+      this.$emit(v ? "focus" : "blur");
     }
-  },
-  computed: {
-    sortedSegments: function sortedSegments() {
-      var segments = this.segments.map(function (x) {
-        return RangeTree.createRange(x);
-      });
-      segments.sort(function (a, b) {
-        return RangeTree.compareRanges(a, b);
-      });
-      return segments;
-    },
-    segmentTree: function segmentTree() {
-      // used as a cache, since value changes less than selection
-      var root = RangeTree.createNode();
-      RangeTree.addRanges(root, this.sortedSegments, true);
-      return root;
-    },
-    hilights: function hilights() {
-      var selection = this.selectedRange;
-      var root = RangeTree.cloneNode(this.segmentTree);
-      RangeTree.addRange(root, RangeTree.createRange({
-        start: selection.start,
-        end: selection.end,
-        tag: {
-          class: "hta-selection"
-        }
-      }));
-      return RangeTree.collectRanges(root);
-    },
-    html: function html() {
-      return this.generateHtml(this.input, this.hilights);
-    }
-  },
-  created: function created() {
-    this.input = this.value || "";
-  },
-  mounted: function mounted() {
-    var self = this;
-    this.selectionUpdateInterval = setInterval(function () {
-      self.updateSelection();
-    }, 300);
-  },
-  destroyed: function destroyed() {
-    if (this.selectionUpdateInterval >= 0) clearInterval(this.selectionUpdateInterval);
   },
   methods: {
-    focus: function focus() {
-      this.$refs.input.focus();
-    },
-    generateHtml: function generateHtml(input, hilights) {
-      if (input.length == 0) return ""; // last '\n' makes another line in textarea, but not in div
-
-      if (input.charAt(input.length - 1) === "\n") input = input + "\n"; // hilights that are open right now
-
-      var open = []; // html(spans and texts) to be joined
-
-      var elements = []; // index of next hilight to check
-
-      var hi = 0; // index of current text part
-
-      var textStart = 0;
-      var self = this;
-
-      for (var i = 0; i < input.length; i++) {
-        while (open.length) {
-          var h = open[open.length - 1];
-          if (h.end > i) break;
-          pushTextPart(i);
-          elements.push("</span>");
-          open.pop();
-        }
-
-        for (; hi < hilights.length; hi++) {
-          var _h = hilights[hi];
-          if (_h.start > i) break;
-          pushTextPart(i);
-          elements.push("<span class='hta-highlight ");
-          var cls = _h.tag && _h.tag.class;
-          if (cls) elements.push(cls);
-          elements.push("'>");
-
-          if (_h.end === _h.start) {
-            elements.push("</span>");
-          } else {
-            open.push(_h);
-          }
-        }
-      }
-
-      pushTextPart(input.length);
-
-      while (open.length) {
-        elements.push("</span>");
-        open.pop();
-      }
-
-      return elements.join("");
-
-      function pushTextPart(index) {
-        if (index <= textStart) return;
-        var part = input.substring(textStart, index);
-        elements.push(self.htmlEncode(part));
-        textStart = index;
-      }
-    },
-    htmlEncode: function htmlEncode(text) {
-      var span = document.createElement("span");
-      span.textContent = text;
-      return span.innerHTML;
-    },
     onContainerScroll: function onContainerScroll() {
       this.$refs.container.scrollLeft = 0;
+    },
+    onInputScroll: function onInputScroll() {
+      this.syncScroll();
     },
     onTextInput: function onTextInput() {
       this.$emit("input", this.$refs.input.value);
       if (this.autoHeight) this.fitHeight();
     },
-    onInputScroll: function onInputScroll() {
-      this.syncScroll();
-    },
-    syncScroll: function syncScroll() {
-      var self = this;
-      this.$nextTick(function () {
-        var s = self.$refs.input;
-        var d = self.$refs.backdrop;
-        d.scrollTop = s.scrollTop;
-        var left = s.scrollLeft;
-
-        if (left > 0) {
-          d.style.transform = "translateX(" + -left + "px)";
-        } else {
-          d.style.transform = "";
-        }
-      });
+    focus: function focus() {
+      this.$refs.input.focus();
     },
     select: function select(range) {
       var _this = this;
@@ -2489,58 +2482,162 @@ function _compareRanges(a, b) {
         return _this.scrollToRevealSelection();
       });
     },
-    updateSelection: function updateSelection() {
-      var input = this.$refs.input;
-      if (!input) return;
-      var range = {
-        start: input.selectionStart || 0,
-        end: input.selectionEnd || 0,
-        direction: input.selectionDirection || "none"
-      };
-      var selection = this.selectedRange;
-
-      if (!this.selectionEquals(range, selection)) {
-        this.$emit("select", range);
-      }
-    },
-    selectionEquals: function selectionEquals(a, b) {
-      if (a === b) return true;
-      if (!a || !b) return false;
-      return a.start === b.start && a.end === b.end && a.direction === b.direction;
-    },
     scrollToRevealSelection: function scrollToRevealSelection() {
       var input = this.$refs.input;
       if (!input) return;
-      var backdrop = this.$refs.backdrop;
-      if (!backdrop) return;
-      var selection = backdrop.querySelector(".hta-selection");
+      var background = this.$refs.background;
+      if (!background) return;
+      var selection = background.querySelector(".hta-selection");
       if (!selection) return;
       var st = selection.offsetTop;
       if (st >= input.scrollTop && st <= input.scrollTop + input.clientHeight) return;
       st = Math.max(0, Math.min(st, input.scrollHeight - input.clientHeight));
       input.scrollTop = st;
     },
+    updateSelection: function updateSelection() {
+      var input = this.$refs.input;
+      if (!input) return;
+      var range = {
+        start: input.selectionStart || 0,
+        end: input.selectionEnd || 0,
+        direction: input.selectionDirection || "forward"
+      };
+      var selection = this.selectedRange;
+
+      if (!selectionEquals(range, selection)) {
+        this.$emit("update:selection", range);
+      }
+    },
     fitHeight: function fitHeight() {
       var self = this;
       this.$nextTick(function () {
-        var el = self.$refs.input;
-        if (!el) return; // compute the height difference which is caused by border and outline
+        var input = self.$refs.input;
+        var container = self.$refs.container;
+        if (!input || !container) return; // set the height to 0 in case of it has to be shrinked
 
-        var outerHeight = parseInt(window.getComputedStyle(el).height, 10);
-        var diff = outerHeight - el.clientHeight; // set the height to 0 in case of it has to be shrinked
-
-        el.style.height = 0; // set the correct height
-        // el.scrollHeight is the full height of the content, not just the visible part
-
-        el.style.height = el.scrollHeight + diff + "px";
+        container.style.height = 0;
+        container.style.height = input.scrollHeight + "px";
+        this.syncSize();
       });
+    },
+    syncScroll: function syncScroll() {
+      var self = this;
+      this.$nextTick(function () {
+        var s = self.$refs.input;
+        var d = self.$refs.background;
+        d.scrollTop = s.scrollTop;
+        var left = s.scrollLeft;
+
+        if (left > 0) {
+          d.style.transform = "translateX(" + -left + "px)";
+        } else {
+          d.style.transform = "";
+        }
+      });
+    },
+    syncSize: function syncSize() {
+      var self = this;
+      this.$nextTick(function () {
+        var input = self.$refs.input;
+        var container = self.$refs.container;
+        var background = self.$refs.background;
+        if (!input || !container || !background) return;
+        if (input.clientHeight != container.clientHeight) input.style.height = container.clientHeight + "px";
+        if (input.clientWidth != container.clientWidth) input.style.width = container.clientWidth + "px";
+        if (background.clientHeight != container.clientHeight) background.style.height = container.clientHeight + "px";
+        if (background.clientWidth != container.clientWidth) background.style.width = container.clientWidth + "px";
+      });
+    },
+    backgroundJob: function backgroundJob() {
+      this.syncSize();
+      this.updateSelection();
     }
+  },
+  created: function created() {
+    this.input = this.value || "";
+  },
+  mounted: function mounted() {
+    var self = this;
+    this.backgroundJobInterval = setInterval(function () {
+      self.backgroundJob();
+    }, 300);
+  },
+  destroyed: function destroyed() {
+    if (this.backgroundJobInterval >= 0) clearInterval(this.backgroundJobInterval);
   }
 }));
-// CONCATENATED MODULE: ./src/components/HilightTextArea.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_HilightTextAreavue_type_script_lang_js_ = (HilightTextAreavue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/HilightTextArea.vue?vue&type=style&index=0&lang=css&
-var HilightTextAreavue_type_style_index_0_lang_css_ = __webpack_require__("d469");
+
+function generateHtml(input, hilights) {
+  if (input.length == 0) return ""; // last '\n' makes another line in textarea, but not in div
+
+  if (input.charAt(input.length - 1) === "\n") input = input + "\n"; // hilights that are open right now
+
+  var open = []; // html(spans and texts) to be joined
+
+  var elements = []; // index of next hilight to check
+
+  var hi = 0; // index of current text part
+
+  var textStart = 0;
+
+  for (var i = 0; i < input.length; i++) {
+    while (open.length) {
+      var h = open[open.length - 1];
+      if (h.end > i) break;
+      pushTextPart(i);
+      elements.push("</span>");
+      open.pop();
+    }
+
+    for (; hi < hilights.length; hi++) {
+      var _h = hilights[hi];
+      if (_h.start > i) break;
+      pushTextPart(i);
+      elements.push("<span class='hta-highlight ");
+      var cls = _h.tag && _h.tag.class;
+      if (cls) elements.push(cls);
+      var ni = _h.tag && _h.tag.nodeIndex;
+
+      if (typeof ni === "number") {
+        elements.push(ni % 2 ? " hta-highlight-odd" : " hta-highlight-even");
+      }
+
+      elements.push("'>");
+
+      if (_h.end === _h.start) {
+        elements.push("</span>");
+      } else {
+        open.push(_h);
+      }
+    }
+  }
+
+  pushTextPart(input.length);
+
+  while (open.length) {
+    elements.push("</span>");
+    open.pop();
+  }
+
+  return elements.join("");
+
+  function pushTextPart(index) {
+    if (index <= textStart) return;
+    var part = input.substring(textStart, index);
+    elements.push(htmlEncode(part));
+    textStart = index;
+  }
+
+  function htmlEncode(text) {
+    var span = document.createElement("span");
+    span.textContent = text;
+    return span.innerHTML;
+  }
+}
+// CONCATENATED MODULE: ./src/components/RawHilightTextArea.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_RawHilightTextAreavue_type_script_lang_js_ = (RawHilightTextAreavue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/components/RawHilightTextArea.vue?vue&type=style&index=0&lang=css&
+var RawHilightTextAreavue_type_style_index_0_lang_css_ = __webpack_require__("6331");
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
@@ -2637,7 +2734,7 @@ function normalizeComponent (
   }
 }
 
-// CONCATENATED MODULE: ./src/components/HilightTextArea.vue
+// CONCATENATED MODULE: ./src/components/RawHilightTextArea.vue
 
 
 
@@ -2647,6 +2744,104 @@ function normalizeComponent (
 /* normalize component */
 
 var component = normalizeComponent(
+  components_RawHilightTextAreavue_type_script_lang_js_,
+  RawHilightTextAreavue_type_template_id_3ba3fd00_render,
+  RawHilightTextAreavue_type_template_id_3ba3fd00_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var RawHilightTextArea = (component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HilightTextArea.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ var HilightTextAreavue_type_script_lang_js_ = (external_commonjs_vue_commonjs2_vue_root_Vue_default.a.extend({
+  name: "HighlightTextArea",
+  inheritAttrs: false,
+  components: {
+    RawHighlightTextArea: RawHilightTextArea
+  },
+  props: {
+    value: {
+      default: "",
+      type: String
+    },
+    //[{ start: 0, length: 5, tag: { class: "identifier" }}, ...]
+    segments: {
+      default: function _default() {
+        return [];
+      },
+      type: Array
+    },
+    // {start: 0, end: 2, direction: "forward"}
+    selection: {
+      default: function _default() {
+        return {
+          start: 0,
+          end: 0,
+          direction: "forward"
+        };
+      },
+      type: Object
+    },
+    autoHeight: {
+      default: false,
+      type: Boolean
+    }
+  },
+  data: function data() {
+    return {
+      hasFocus: false
+    };
+  },
+  methods: {
+    onFocus: function onFocus() {
+      this.hasFocus = true;
+      this.$emit("focus");
+    },
+    onBlur: function onBlur() {
+      this.hasFocus = false;
+      this.$emit("blur");
+    }
+  }
+}));
+// CONCATENATED MODULE: ./src/components/HilightTextArea.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_HilightTextAreavue_type_script_lang_js_ = (HilightTextAreavue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/components/HilightTextArea.vue?vue&type=style&index=0&lang=css&
+var HilightTextAreavue_type_style_index_0_lang_css_ = __webpack_require__("d469");
+
+// CONCATENATED MODULE: ./src/components/HilightTextArea.vue
+
+
+
+
+
+
+/* normalize component */
+
+var HilightTextArea_component = normalizeComponent(
   components_HilightTextAreavue_type_script_lang_js_,
   render,
   staticRenderFns,
@@ -2657,7 +2852,7 @@ var component = normalizeComponent(
   
 )
 
-/* harmony default export */ var HilightTextArea = (component.exports);
+/* harmony default export */ var HilightTextArea = (HilightTextArea_component.exports);
 // CONCATENATED MODULE: ./src/lib.js
 
 
@@ -2665,8 +2860,10 @@ var component = normalizeComponent(
 
 
 
+
 var Components = {
-  HilightTextArea: HilightTextArea
+  HilightTextArea: HilightTextArea,
+  RawHilightTextArea: RawHilightTextArea
 };
 Object.keys(Components).forEach(function (name) {
   external_commonjs_vue_commonjs2_vue_root_Vue_default.a.component(name, Components[name]);
