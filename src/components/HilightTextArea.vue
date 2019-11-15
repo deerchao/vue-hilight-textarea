@@ -61,6 +61,9 @@ export default Vue.extend({
     onBlur: function() {
       this.hasFocus = false;
       this.$emit("blur");
+    },
+    focus: function() {
+      this.$refs.input.focus();
     }
   }
 });
@@ -71,6 +74,7 @@ export default Vue.extend({
   padding: 3px;
   border: solid 1px #a9a9a9;
   border-radius: 3px;
+  display: flex;
 }
 
 .hta-border-focus {
@@ -78,7 +82,6 @@ export default Vue.extend({
 }
 
 .hta-border .hta-container {
-  width: 100%;
-  height: 100%;
+  flex: 1 1 auto;
 }
 </style>
